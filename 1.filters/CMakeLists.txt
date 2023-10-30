@@ -35,4 +35,6 @@ else()
 endif()
 
 
-add_subdirectory(1.1.pass_through_filter)
+add_subdirectory(1.1.passthrough)
+add_subdirectory(1.2.voxel_grid)
+add_subdirectory(1.3.statistical_removal)
