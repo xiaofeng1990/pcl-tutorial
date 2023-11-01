@@ -3,6 +3,7 @@
 #include <pcl/io/pcd_io.h>
 #include <pcl/point_types.h>
 
+// 使用VoxelGrid对点云下采样进行稀疏处理
 int main()
 {
     pcl::PCLPointCloud2::Ptr cloud(new pcl::PCLPointCloud2());
@@ -17,6 +18,7 @@ int main()
     // Create the filtering object
     pcl::VoxelGrid<pcl::PCLPointCloud2> sor;
     sor.setInputCloud(cloud);
+    // 越大得到的点云越稀疏
     sor.setLeafSize(0.01f, 0.01f, 0.01f);
     // sor.setLeafSize(0.05f, 0.05f, 0.05f);
     sor.filter(*cloud_filtered);

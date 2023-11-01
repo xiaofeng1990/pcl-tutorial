@@ -2,6 +2,7 @@
 #include <pcl/filters/passthrough.h>
 #include <pcl/point_types.h>
 
+// 使用PassThrough对选定轴进行区域范围过滤
 int main()
 {
     std::cout << "pass through filter" << std::endl;

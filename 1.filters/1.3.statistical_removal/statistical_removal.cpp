@@ -3,6 +3,7 @@
 #include <pcl/io/pcd_io.h>
 #include <pcl/point_types.h>
 
+// 使用StatisticalOutlierRemoval对点云去除噪音
 int main()
 {
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(
@@ -18,7 +19,8 @@ int main()
     // Create the filtering object
     pcl::StatisticalOutlierRemoval<pcl::PointXYZ> sor;
     sor.setInputCloud(cloud);
-    sor.setMeanK(500);
+    // 越大得到的点云越稀疏
+    sor.setMeanK(50);
     sor.setStddevMulThresh(1.0);
     sor.filter(*cloud_filtered);
     std::cerr << "Cloud after filtering: " << std::endl;
