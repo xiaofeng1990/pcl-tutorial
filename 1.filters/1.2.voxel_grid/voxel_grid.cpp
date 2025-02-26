@@ -12,25 +12,21 @@ int main()
     pcl::PCDReader reader;
     // load pcd file
     reader.read("table_scene_lms400.pcd", *cloud);
-    std::cerr << "PointCloud before filtering: " << cloud->width * cloud->height
-              << " data points (" << pcl::getFieldsList(*cloud) << ")."
-              << std::endl;
+    std::cerr << "PointCloud before filtering: " << cloud->width * cloud->height << " data points ("
+              << pcl::getFieldsList(*cloud) << ")." << std::endl;
     // Create the filtering object
     pcl::VoxelGrid<pcl::PCLPointCloud2> sor;
     sor.setInputCloud(cloud);
     // 越大得到的点云越稀疏
-    sor.setLeafSize(0.01f, 0.01f, 0.01f);
+    sor.setLeafSize(0.05f, 0.05f, 0.05f);
     // sor.setLeafSize(0.05f, 0.05f, 0.05f);
     sor.filter(*cloud_filtered);
 
-    std::cerr << "PointCloud after filtering: "
-              << cloud_filtered->width * cloud_filtered->height
-              << " data points (" << pcl::getFieldsList(*cloud_filtered) << ")."
-              << std::endl;
+    std::cerr << "PointCloud after filtering: " << cloud_filtered->width * cloud_filtered->height << " data points ("
+              << pcl::getFieldsList(*cloud_filtered) << ")." << std::endl;
     pcl::PCDWriter writer;
     // writer point cloud to pcd file
-    writer.write("table_scene_lms400_downsampled.pcd", *cloud_filtered,
-                 Eigen::Vector4f::Zero(), Eigen::Quaternionf::Identity(),
-                 false);
+    writer.write("table_scene_lms400_downsampled.pcd", *cloud_filtered, Eigen::Vector4f::Zero(),
+                 Eigen::Quaternionf::Identity(), false);
     return 0;
 }

@@ -6,10 +6,8 @@
 int main()
 {
     std::cout << "pass through filter" << std::endl;
-    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(
-        new pcl::PointCloud<pcl::PointXYZ>);
-    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered(
-        new pcl::PointCloud<pcl::PointXYZ>);
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>);
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered(new pcl::PointCloud<pcl::PointXYZ>);
 
     // Fill in the cloud data
     cloud->width = 5;
@@ -24,8 +22,7 @@ int main()
     }
     std::cerr << "Cloud before filtering: " << std::endl;
     for (const auto &point : *cloud)
-        std::cerr << "    " << point.x << " " << point.y << " " << point.z
-                  << std::endl;
+        std::cerr << "    " << point.x << " " << point.y << " " << point.z << std::endl;
 
     pcl::PassThrough<pcl::PointXYZ> pass;
     pass.setInputCloud(cloud);
@@ -39,7 +36,6 @@ int main()
     pass.filter(*cloud_filtered);
     std::cerr << "Cloud after filtering: " << std::endl;
     for (const auto &point : *cloud_filtered)
-        std::cerr << "    " << point.x << " " << point.y << " " << point.z
-                  << std::endl;
+        std::cerr << "    " << point.x << " " << point.y << " " << point.z << std::endl;
     return 0;
 }

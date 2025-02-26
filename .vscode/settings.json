@@ -59,5 +59,6 @@
         "set": "cpp",
         "string": "cpp",
         "string_view": "cpp"
-    }
+    },
+    "C_Cpp.clang_format_path": "/usr/bin/clang-format"
 }
