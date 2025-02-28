@@ -2,7 +2,7 @@
 #include <pcl/filters/conditional_removal.h>
 #include <pcl/filters/radius_outlier_removal.h>
 
-//
+// 根据给定的条件删除离群值
 int main(int argc, char **argv)
 {
 
