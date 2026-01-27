@@ -60,5 +60,22 @@
         "string": "cpp",
         "string_view": "cpp"
     },
-    "C_Cpp.clang_format_path": "/usr/bin/clang-format"
+    "C_Cpp.clang_format_path": "/usr/bin/clang-format",
+    "ROS2.distro": "humble",
+    "python.autoComplete.extraPaths": [
+        "/home/ubuntu/workspaces/wyf/dobot_ws/install/servo_action/lib/python3.10/site-packages",
+        "/home/ubuntu/workspaces/wyf/dobot_ws/install/dobot_msgs_v4/local/lib/python3.10/dist-packages",
+        "/home/ubuntu/workspaces/wyf/dobot_ws/install/dobot_moveit/lib/python3.10/site-packages",
+        "/home/ubuntu/workspaces/wyf/dobot_ws/install/dobot_demo/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/ubuntu/workspaces/wyf/dobot_ws/install/servo_action/lib/python3.10/site-packages",
+        "/home/ubuntu/workspaces/wyf/dobot_ws/install/dobot_msgs_v4/local/lib/python3.10/dist-packages",
+        "/home/ubuntu/workspaces/wyf/dobot_ws/install/dobot_moveit/lib/python3.10/site-packages",
+        "/home/ubuntu/workspaces/wyf/dobot_ws/install/dobot_demo/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
 }

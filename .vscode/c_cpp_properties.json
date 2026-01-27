@@ -5,8 +5,9 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "/usr/include/eigen3",
-                "/usr/include/pcl-1.10",
-                "/usr/include/vtk-7.1"
+                "/usr/include/pcl-1.12",
+                "/usr/include/vtk-9.1",
+                "/home/ubuntu/workspaces/wxf/pcl/install/include/pcl-1.12"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
