@@ -37,4 +37,4 @@ endif()
 
 add_subdirectory(2.1.normal_estimation)
 add_subdirectory(2.2.narf_features)
-
+add_subdirectory(2.3.intergral_normal_estimation)
